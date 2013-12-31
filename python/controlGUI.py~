@@ -30,13 +30,13 @@ class GUI():
 		scale3.pack(anchor = CENTER)
 		scale3.set(7000)
 
-		#scale4= Scale(self.root, variable = self.red , from_ = 0, to = 40000, orient = HORIZONTAL, label = "Red", command = self.dev.set_red)
-		#scale4.pack(anchor = CENTER)
-		#scale4.set(0)
+		scale4= Scale(self.root, variable = self.red , from_ = 0, to = 40000, orient = HORIZONTAL, label = "Red", command = self.dev.set_red)
+		scale4.pack(anchor = CENTER)
+		scale4.set(0)
 
-		#scale5= Scale(self.root, variable = self.green , from_ = 0, to = 40000, orient = HORIZONTAL, label = "Green", command = self.dev.set_green)
-		#scale5.pack(anchor = CENTER)
-		#scale5.set(0)
+		scale5= Scale(self.root, variable = self.green , from_ = 0, to = 40000, orient = HORIZONTAL, label = "Green", command = self.dev.set_green)
+		scale5.pack(anchor = CENTER)
+		scale5.set(0)
 
 		scale6= Scale(self.root, variable = self.blue , from_ = 0, to = 40000, orient = HORIZONTAL, label = "Blue", command = self.dev.set_blue)
 		scale6.pack(anchor = CENTER)

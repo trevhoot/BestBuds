@@ -253,7 +253,7 @@ int16_t main(void) {
 	nSleepPin = &D[5];
 	pin_digitalOut(nSleepPin);
 	pin_write(nSleepPin, 1);
-	stepPin = &D[7];
+	stepPin = &D[4];
 	pin_digitalOut(stepPin);
 	//oc_pwm(&oc5, stepPin, NULL, 100, (uint16_t)(0));
 

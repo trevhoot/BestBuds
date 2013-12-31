@@ -453,7 +453,7 @@ int16_t main(void) {
 
 		if (changeFlag >= 3){
 			changeFlag = 0;
-			motorControl(dist);
+			//motorControl(dist);
 		}
 
 

@@ -30,6 +30,23 @@
 _TIMER timer1, timer2, timer3, timer4, timer5;
 float timer_multipliers[4] = { TCY, 8.*TCY, 64.*TCY, 256.*TCY };
 
+void timer_serviceInterrupt(_TIMER *self) {
+    timer_lower(self);
+    if (self->every) {
+        self->every(self);
+    } else if (self->after) {
+        if (self->aftercount) {
+            self->after(self);
+            self->aftercount--;
+        } else {
+            timer_disableInterrupt(self);
+            self->after = NULL;
+        }
+    } else {
+        timer_disableInterrupt(self);
+    }
+}
+
 void __attribute__((interrupt, auto_psv)) _T1Interrupt(void) {
     timer_serviceInterrupt(&timer1);
 }

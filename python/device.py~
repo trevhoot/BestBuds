@@ -53,12 +53,12 @@ class Device:
 			self.dev.ctrl_transfer(0x40, self.SET_RED, int(redTarget), 0)
 		except usb.core.USBError:
 			print "Could not send SET_RED vendor request."
-	def set_green(self, greenTarget):
+	def set_threshold(self, greenTarget):
 		try:
 			self.dev.ctrl_transfer(0x40, self.SET_GREEN, int(greenTarget), 0)
 		except usb.core.USBError:
 			print "Could not send SET_GREEN vendor request."
-	def set_blue(self, blueTarget):
+	def set_threshold(self, blueTarget):
 		try:
 			self.dev.ctrl_transfer(0x40, self.SET_BLUE, int(blueTarget), 0)
 		except usb.core.USBError:
